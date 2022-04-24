@@ -1,7 +1,7 @@
 <template>
-  <footer class="footer -mx-4 md:mx-0">
+  <footer class="footer">
     <div class="container mx-auto pb-6 flex justify-center">
-      <a href="https://github.com/Gomah/bluise">
+      <a target="_blank" href="https://github.com/JaimeGG64">
         <svg
           baseProfile="tiny"
           height="32px"

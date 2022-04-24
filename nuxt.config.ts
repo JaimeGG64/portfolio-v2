@@ -137,7 +137,6 @@ const nuxtConfig: Configuration = {
       },
     ],
     '@nuxtjs/eslint-module',
-    '@nuxtjs/tailwindcss',
   ],
 
   build: {
