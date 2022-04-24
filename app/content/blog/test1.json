@@ -1,6 +1,7 @@
 {
   "publishedAt": "23rd Apr 2021",
-  "title": "test1",
-  "content": "hello",
-  "featuredImage": null
+  "title": "Retro Gaming Cables",
+  "content": "## Project Specification\n\n* **Class**: ART 405 Advance Web Design\n* **Project Type**: Web Design System\n* **Design Tool**: Figma\n* **Duration**: 6 weeks\n\n## Company Overview\nBase in the United Kingdom (UK) Retro Gaming Cables (RGC) provides high quality cable solutions for various tv setups. Mostly focus on retro gaming systems such as Super Nintendo, Sega Genesis, Original Playstation, and much more. They proudly ship their cables anywhere in the world.",
+  "featuredImage": "/images/uploads/rgc.png",
+  "seoDescription": "An atomic design system for the UK based E-commerce store that develop custom cables for retro gamming."
 }
