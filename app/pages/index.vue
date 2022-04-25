@@ -1,16 +1,39 @@
 <template>
   <section class="home">
-    <div class="py-24 md:py-36 mx-auto flex flex-wrap flex-col md:flex-row items-center">
-      <h1>Hello There</h1>
+    <div>
+      <h1>Jaime Garcia</h1>
+      <p>Front-End Developer/UX Engineer</p>
+      <h2>About Me</h2>
       <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos ducimus dolor cum,
-        nulla sed ex culpa ratione nesciunt, architecto, doloremque maiores dolore facere pariatur
-        earum molestiae dicta voluptate quos saepe!
+        Hello there, my name is Jaime Garcia a Front-End Web Developer. I am interested in bridging
+        the gap between creativity and technology. During my time at California State University,
+        Northridge (CSUN) I had the chance to work with talented creatives and software engineers to
+        develop simple solutions that everyone can benefits everyone. Feel free to explore my site
+        and download my resume.
       </p>
+      <button>Learn More About Me</button>
+      <button>Download Resume</button>
+      <h2>Projects</h2>
+      <div>
+        <div v-for="(post, index) in posts" :key="index" class="w-full md:w-1/2 my-4 md:px-4">
+          <div class="post">
+            <nuxt-link :to="`/blog/${post.slug}`">
+              <img
+                :alt="post.title"
+                class="w-full"
+                :src="post.featuredImage || 'https://source.unsplash.com/random/640x340'"
+              />
+              <div class="p-6 bg-white">
+                <h3 class="text-2xl mb-2">{{ post.title }}</h3>
+              </div>
+            </nuxt-link>
+          </div>
+        </div>
+      </div>
+
       <div class="flex flex-col w-full xl:w-3/5 justify-center lg:items-start overflow-y-hidden">
         <div class="mb-12 xl:mb-0">
-          <h4 v-if="isSignedUp">Thank you - we'll be in touch shortly.</h4>
-
+          <p v-if="isSignedUp">Thank you - we'll be in touch shortly.</p>
           <form
             v-else
             @submit.prevent="handleSubmit"

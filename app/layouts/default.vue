@@ -29,6 +29,12 @@ export default class DefaultLayout extends Vue {}
   margin-top: auto;
 }
 
+.container {
+  margin: 0 auto;
+  padding: 0 1rem;
+  max-width: 65rem;
+}
+
 .nuxt {
   transition: all 0.5s cubic-bezier(0.55, 0, 0.1, 1);
 }
