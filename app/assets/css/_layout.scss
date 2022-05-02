@@ -1,0 +1,24 @@
+.container, .blog-container {
+    margin: 0 auto;
+    padding: 0 1.25rem;
+    max-width: 30rem;
+}
+
+@media screen and (min-width: map-get($break-point, 'md')) {
+    .container, .blog-container {
+        padding: 0 4.5rem;
+        max-width: unset;
+    }
+}
+
+@media screen and (min-width: map-get($break-point, 'lg')) {
+    .container {
+        padding: 0 1rem;
+        max-width: 65rem;
+    }
+
+    .blog-container {
+        padding: 0 1rem;
+        max-width: 40rem;
+    }
+}

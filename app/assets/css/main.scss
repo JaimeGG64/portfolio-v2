@@ -1,12 +1,14 @@
 @import 'reset';
 @import 'variables';
+@import 'layout';
+@import 'markdown';
 @import 'blog';
 @import 'typography';
-@import 'markdown';
 
 body {
   @apply antialiased;
   @apply subpixel-antialiased;
+  background-color: $content-background;
 }
 
 .main {

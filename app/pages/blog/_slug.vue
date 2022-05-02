@@ -1,16 +1,15 @@
 <template>
   <article class="post" :class="post.slug">
-    <div class="py-8 md:py-16 text-center mx-auto">
-      <h1 class="text-lg md:text-xl lg:text-4xl xl:text-6xl">
+    <div>
+      <h1>
         {{ post.title }}
       </h1>
+      <p>
+        {{ post.seoDescription }}
+      </p>
     </div>
 
-    <p>
-      {{ post.seoDescription }}
-    </p>
-
-    <div v-html="$md.render(post.content)" class="post__content markdown pt-4 md:pt-6 md:pb-24" />
+    <div v-html="$md.render(post.content)" class="blog-container" />
   </article>
 </template>
 
