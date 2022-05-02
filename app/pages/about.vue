@@ -4,7 +4,7 @@
     <p>
       Hello there, my name is Jaime Garcia a Front-End Web Developer. I am interested in bridging
       the gap between creativity and technology. During my time at California State University,
-      Northridge (CSUN) I had the chance to work with talented creatives and software engineers to
+      Northridge (CSUN), I had the chance to work with talented creatives and software engineers to
       develop simple solutions that everyone can benefits everyone. Feel free to explore my site and
       download my resume.
     </p>
@@ -20,7 +20,7 @@
       <div class="skill-sets-wrapper-item">
         <h3>Knowledge</h3>
         <ul>
-          <li>Front-End Development</li>
+          <li>Front-End Web Development</li>
           <li>Wireframing</li>
           <li>Web Content Accessibility Guidelines (WCAG)</li>
           <li>Responsive Web Design</li>
@@ -30,17 +30,18 @@
         </ul>
       </div>
       <div class="skill-sets-wrapper-item">
-        <h3>Web Development Tools</h3>
+        <h3>Web Development</h3>
         <ul class="skill-sets-wrapper--two-column-list">
           <li>HTML</li>
           <li>CSS</li>
-          <li>JavaScript</li>
+          <li>JavaScript (ES6)</li>
           <li>Vue</li>
           <li>React</li>
           <li>Node</li>
           <li>SCSS</li>
           <li>PHP</li>
           <li>NPM</li>
+          <li>Yarn</li>
           <li>Gulp</li>
           <li>SQL</li>
           <li>Git</li>
@@ -61,8 +62,9 @@
     <h2>Work Experience</h2>
     <div class="work-experience-wrapper">
       <div class="work-experience-item">
+        <img class="work-experience-wrapper__logo" src="/images/uploads/NASA-logo.svg" alt="" />
         <h3>NASA Ames Research Center</h3>
-        <p>June 2021 – August 2021</p>
+        <p class="work-experience-wrapper__term">June 2021 &mdash; August 2021</p>
         <p>
           Design and executed internal stakeholder interview campaign. Synthesized and analyzed
           stakeholder interview results for management to make informed decisions. Created
@@ -71,18 +73,24 @@
           decisions, and best practices with implementation details.
         </p>
       </div>
-      <div>
+      <div class="work-experience-item">
+        <img class="work-experience-wrapper__logo" src="/images/uploads/ixla-logo.png" alt="" />
         <h3>IntersectLA</h3>
-        <p>June 2020 – May 2021, August 2021 – Present</p>
+        <p class="work-experience-wrapper__term">
+          June 2020 &mdash; May 2021, August 2021 &mdash; Present
+        </p>
         <p>
           Collaborate with students in different disciplines such as Graphic Design, Marketing, and
           Computer Science. Develop custom WordPress themes with PHP, SCSS, and Gulp. Headed several
           projects with students to benefit the CSUN community.
         </p>
       </div>
-      <div>
+      <div class="work-experience-item">
+        <img class="work-experience-wrapper__logo" src="/images/uploads/metalab-logo.svg" alt="" />
         <h3>META+LAB</h3>
-        <p>June 2016 – July 2016, January 2018 – June 2019</p>
+        <p class="work-experience-wrapper__term">
+          June 2016 &mdash; July 2016, January 2018 &mdash; June 2019
+        </p>
         <p>
           Started a High School intern designing and developing assets for web application. Then
           returned as full-time student to develop web applications in a agile scrum environment.
@@ -92,11 +100,25 @@
         </p>
       </div>
     </div>
-    <!-- <section>
-      <div>
-        <h3>Projects</h3>
+    <div>
+      <h2>Projects</h2>
+      <div class="blog-collection-wrapper">
+        <div v-for="(post, index) in posts" :key="index" class="w-full md:w-1/2 my-4 md:px-4">
+          <div class="post">
+            <nuxt-link :to="`/blog/${post.slug}`">
+              <img
+                :alt="post.title"
+                class="w-full"
+                :src="post.featuredImage || 'https://source.unsplash.com/random/640x340'"
+              />
+              <div class="p-6 bg-white">
+                <h3 class="text-2xl mb-2">{{ post.title }}</h3>
+              </div>
+            </nuxt-link>
+          </div>
+        </div>
       </div>
-    </section> -->
+    </div>
   </div>
 </template>
 
@@ -126,22 +148,46 @@ export default class About extends Vue {
 <style lang="scss">
 .skill-sets-wrapper {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
   column-gap: 1rem;
 }
 
 .work-experience-wrapper {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
   column-gap: 1rem;
+  &__logo {
+    height: 7rem;
+    margin-bottom: 0.25rem;
+  }
+  &__term {
+    font-style: oblique;
+  }
 }
 
-.skill-sets-wrapper-item {
-  .skill-sets-wrapper--two-column-list {
-    column-count: 2;
+@media screen and (min-width: map-get($break-point , 'md')) {
+  .skill-sets-wrapper {
+    grid-template-columns: 1.15fr 1fr 1fr;
   }
-  ul {
-    padding-left: 1rem;
+  .work-experience-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .skill-sets-wrapper-item {
+    .skill-sets-wrapper--two-column-list {
+      column-count: 2;
+    }
+    ul {
+      padding-left: 1rem;
+    }
+  }
+}
+
+@media screen and (min-width: map-get($break-point , 'lg')) {
+  .skill-sets-wrapper {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .work-experience-wrapper {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 </style>

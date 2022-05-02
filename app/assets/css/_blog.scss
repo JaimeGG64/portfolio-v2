@@ -1,0 +1,10 @@
+.blog-collection-wrapper {
+    display: grid;
+}
+
+@media screen and (min-width: map-get($break-point, 'md')) {
+    .blog-collection-wrapper {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+    }
+}

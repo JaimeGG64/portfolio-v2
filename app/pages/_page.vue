@@ -4,6 +4,10 @@
       {{ page.title }}
     </h1>
 
+    <p>
+      {{ page.seoDescription }}
+    </p>
+
     <div v-html="$md.render(page.content)" class="page__content markdown pt-4 md:pt-6 md:pb-24" />
   </section>
 </template>
