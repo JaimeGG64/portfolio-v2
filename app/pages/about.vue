@@ -1,20 +1,23 @@
 <template>
-  <div class="about container">
-    <h1>About Me</h1>
-    <p>
-      Hello there, my name is Jaime Garcia a Front-End Web Developer. I am interested in bridging
-      the gap between creativity and technology. During my time at California State University,
-      Northridge (CSUN), I had the chance to work with talented creatives and software engineers to
-      develop simple solutions that everyone can benefits everyone. Feel free to explore my site and
-      download my resume.
-    </p>
-    <button>Download Resume</button>
-    <h2>Education</h2>
-    <h3>California State University, Northridge (CSUN)</h3>
-    <ul>
-      <li>Bachelor of Arts (BA), Graphic Design</li>
-      <li>Minor in Computer Science</li>
-    </ul>
+  <div class="about">
+    <div class="container">
+      <h1>About Me</h1>
+      <p>
+        Hello there, my name is Jaime Garcia a Front-End Web Developer. I am interested in bridging
+        the gap between creativity and technology. During my time at California State University,
+        Northridge (CSUN), I had the chance to work with talented creatives and software engineers
+        to develop simple solutions that everyone can benefits everyone. Feel free to explore my
+        site and download my resume.
+      </p>
+      <button>Download Resume</button>
+      <h2>Education</h2>
+      <h3>California State University, Northridge (CSUN)</h3>
+      <ul>
+        <li>Bachelor of Arts (BA), Graphic Design</li>
+        <li>Minor in Computer Science</li>
+      </ul>
+    </div>
+
     <div class="container">
       <h2>Skill Sets</h2>
       <div class="skill-sets-wrapper">
@@ -178,9 +181,6 @@ export default class About extends Vue {
   .skill-sets-wrapper-item {
     .skill-sets-wrapper--two-column-list {
       column-count: 2;
-    }
-    ul {
-      padding-left: 1rem;
     }
   }
 }
