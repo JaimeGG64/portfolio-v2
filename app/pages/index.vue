@@ -1,8 +1,10 @@
 <template>
   <section class="home">
-    <div class="container">
-      <h1>Jaime Garcia</h1>
-      <p>Front-End Developer/UX Engineer</p>
+    <div class="intro-sec">
+      <div class="container">
+        <h1 class="intro-sec__heading">Jaime Garcia</h1>
+        <p class="intro-sec__profession">Front-End Developer/UX Engineer</p>
+      </div>
     </div>
     <div class="container">
       <h2>About Me</h2>
@@ -33,29 +35,6 @@
         </div>
       </div>
     </div>
-    <div class="flex flex-col w-full xl:w-3/5 justify-center lg:items-start overflow-y-hidden">
-      <div class="mb-12 xl:mb-0">
-        <p v-if="isSignedUp">Thank you - we'll be in touch shortly.</p>
-        <form
-          v-else
-          @submit.prevent="handleSubmit"
-          name="signups"
-          netlify
-          class="flex items-center border-b border-b-2 border-blue-400 py-2"
-        >
-          <input
-            ref="emailInput"
-            v-model="form.email"
-            type="text"
-            name="email"
-            placeholder="your@email.com"
-            aria-label="Email address"
-          />
-
-          <button type="submit">Submit</button>
-        </form>
-      </div>
-    </div>
   </section>
 </template>
 
@@ -73,43 +52,19 @@ export default class Home extends Vue {
   get posts(): Post[] {
     return this.$store.state.posts;
   }
-
-  isSignedUp = false;
-
-  form = {
-    email: '',
-  };
-
-  encode(data): string {
-    return Object.keys(data)
-      .map((key) => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`)
-      .join('&');
-  }
-
-  validEmail(email): boolean {
-    // eslint-disable-next-line
-    const re =
-      '/^(([^<>()[]\\.,;:s@"]+(.[^<>()[]\\.,;:s@"]+)*)|(".+"))@(([[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}])|(([a-zA-Z-0-9]+.)+[a-zA-Z]{2,}))$/';
-    return re.test(email);
-  }
-
-  async handleSubmit(): Promise<void> {
-    if (!this.validEmail(this.form.email)) {
-      this.$refs.emailInput.focus();
-      return;
-    }
-
-    try {
-      await fetch('/', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: this.encode({ 'form-name': 'signups', ...this.form }),
-      });
-
-      this.isSignedUp = true;
-    } catch (error) {
-      console.error(error);
-    }
-  }
 }
 </script>
+
+<style lang="scss">
+.intro-sec {
+  background: $primary;
+  height: calc(100vh - 14rem);
+  &__heading {
+    color: $content-background;
+  }
+  &__profession {
+    color: #e3e3e3;
+    font-size: 1.2rem;
+  }
+}
+</style>

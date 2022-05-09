@@ -1,12 +1,15 @@
 <template>
   <article class="post" :class="post.slug">
-    <div>
-      <h1>
-        {{ post.title }}
-      </h1>
-      <p>
-        {{ post.seoDescription }}
-      </p>
+    <div class="blog-header">
+      <div class="blog-container">
+        <h1 class="blog-header__header">
+          {{ post.title }}
+        </h1>
+        <p class="blog-header__desc">
+          {{ post.seoDescription }}
+        </p>
+        <img class="blog-header__featured-image" :src="post.featuredImage" alt="" />
+      </div>
     </div>
 
     <div v-html="$md.render(post.content)" class="blog-container" />

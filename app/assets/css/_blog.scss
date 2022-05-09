@@ -1,10 +1,46 @@
+.blog-header{
+    &::after{
+        content: "";
+        z-index: -1; 
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 37%;
+        background: $primary;
+    }
+    &__header, &__desc{
+        color: $content-background;
+    }
+    &__featured-image{
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+}
+
 .blog-collection-wrapper {
     display: grid;
 }
 
 @media screen and (min-width: map-get($break-point, 'md')) {
+    .blog-header {
+        &::after {
+            height: 30rem;
+        }
+        &__featured-image {
+            margin-bottom: 2.75rem;
+        }
+    }
     .blog-collection-wrapper {
         grid-template-columns: repeat(3, 1fr);
         gap: 1rem;
+    }
+}
+
+@media screen and (min-width: map-get($break-point, 'lg')) {
+    .blog-header{
+        &::after{
+            height: 28rem;
+        }
     }
 }

@@ -1,0 +1,12 @@
+button{
+    background: none;
+    color: $primary;
+    font-weight: bold;
+    border: 3px $primary solid;
+    padding: .45rem;
+    &:hover{
+        transition: all ease .25;
+        background: $primary;
+        color: $content-background;
+    }
+}

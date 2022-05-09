@@ -41,11 +41,15 @@ export default class Header extends Vue {
 </script>
 
 <style lang="scss">
+header {
+  background: white;
+}
 .header-nav {
   display: flex;
   justify-content: space-between;
   padding-top: 1rem;
   padding-bottom: 1rem;
+  background: white;
 }
 
 .header__logo {
