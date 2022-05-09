@@ -91,4 +91,11 @@ export default class Home extends Vue {
     }
   }
 }
+
+@media screen and (min-width: map-get($break-point, 'lg')) {
+  .quick-about-me {
+    column-gap: 5rem;
+    grid-template-columns: 1fr 1fr;
+  }
+}
 </style>
