@@ -1,23 +1,25 @@
 <template>
   <div class="about">
-    <div class="container">
-      <h1>About Me</h1>
-      <p>
+    <div class="container about-me">
+      <h1 class="about-me__heading">About Me</h1>
+      <img class="about-me__image" src="/images/uploads/headshot.jpg" alt="" />
+      <p class="about-me__copy">
         Hello there, my name is Jaime Garcia a Front-End Web Developer. I am interested in bridging
         the gap between creativity and technology. During my time at California State University,
         Northridge (CSUN), I had the chance to work with talented creatives and software engineers
         to develop simple solutions that everyone can benefits everyone. Feel free to explore my
         site and download my resume.
       </p>
-      <button>Download Resume</button>
-      <h2>Education</h2>
-      <h3>California State University, Northridge (CSUN)</h3>
-      <ul>
-        <li>Bachelor of Arts (BA), Graphic Design</li>
-        <li>Minor in Computer Science</li>
-      </ul>
+      <button class="about-me__download">Download Resume</button>
+      <div class="about-me__education">
+        <h2>Education</h2>
+        <h3>California State University, Northridge (CSUN)</h3>
+        <ul>
+          <li>Bachelor of Arts (BA), Graphic Design</li>
+          <li>Minor in Computer Science</li>
+        </ul>
+      </div>
     </div>
-
     <div class="container">
       <h2>Skill Sets</h2>
       <div class="skill-sets-wrapper">
@@ -167,6 +169,14 @@ export default class About extends Vue {
   }
   &__term {
     font-style: oblique;
+    margin: 0;
+  }
+}
+
+.about-me {
+  &__image {
+    width: 80%;
+    margin: 0.5rem 0;
   }
 }
 
@@ -183,6 +193,33 @@ export default class About extends Vue {
       column-count: 2;
     }
   }
+  .about-me {
+    display: grid;
+    grid-template-areas:
+      'heading image'
+      'copy image'
+      'download image'
+      'education education';
+    grid-template-columns: 1.75fr 1fr;
+    column-gap: 1rem;
+    &__heading {
+      grid-area: heading;
+    }
+    &__copy {
+      grid-area: copy;
+    }
+    &__download {
+      grid-area: download;
+    }
+    &__image {
+      grid-area: image;
+      width: 100%;
+      margin: 0.75rem;
+    }
+    &__education {
+      grid-area: education;
+    }
+  }
 }
 
 @media screen and (min-width: map-get($break-point , 'lg')) {
@@ -192,6 +229,16 @@ export default class About extends Vue {
 
   .work-experience-wrapper {
     grid-template-columns: repeat(3, 1fr);
+  }
+
+  .about-me {
+    grid-template-areas:
+      'heading image'
+      'copy image'
+      'download image'
+      'education image';
+    grid-template-columns: 1fr 1fr;
+    column-gap: 4rem;
   }
 }
 </style>

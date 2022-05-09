@@ -2,6 +2,8 @@ button{
     background: none;
     color: $primary;
     font-weight: bold;
+    width: fit-content;
+    height: fit-content;
     border: 3px $primary solid;
     padding: .45rem;
     &:hover{

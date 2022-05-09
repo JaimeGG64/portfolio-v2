@@ -14,12 +14,15 @@
       </span>
       <nav class="nav main_list">
         <ul class="nav-list">
+          <li>
+            <nuxt-link to="/">Home</nuxt-link>
+          </li>
           <li v-for="(page, index) in pages" :key="index" class="nav-list-item">
             <nuxt-link :to="`/${page.slug}`">{{ page.title }}</nuxt-link>
           </li>
-          <li>
+          <!-- <li>
             <nuxt-link to="/blog" class="nav-list-item"> Projects </nuxt-link>
-          </li>
+          </li> -->
         </ul>
       </nav>
     </div>
