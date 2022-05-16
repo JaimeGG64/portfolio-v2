@@ -9,6 +9,9 @@
         height: 20rem;
         background: $primary;
     }
+    &__header{
+        padding-top: 2rem;
+    }
     &__header, &__desc{
         color: $content-background;
     }
@@ -27,6 +30,9 @@
     .blog-header {
         &::after {
             height: 30rem;
+        }
+        &__header {
+            padding-top: 2rem;
         }
         &__featured-image {
             margin-bottom: 2.75rem;

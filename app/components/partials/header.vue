@@ -7,11 +7,11 @@
         </nuxt-link>
       </div>
 
-      <span class="navTrigger">
+      <!-- <span class="navTrigger">
         <i></i>
         <i></i>
         <i></i>
-      </span>
+      </span> -->
       <nav class="nav main_list">
         <ul class="nav-list">
           <li>
@@ -49,6 +49,7 @@ header {
 }
 .header-nav {
   display: flex;
+  height: 5rem;
   justify-content: space-between;
   padding-top: 1rem;
   padding-bottom: 1rem;
@@ -62,13 +63,12 @@ header {
 }
 
 .main_list {
-  height: 65px;
-  float: right;
+  display: flex;
+  align-self: center;
 }
 
 .main_list ul {
   width: 100%;
-  height: 65px;
   display: flex;
   list-style: none;
   margin: 0;
@@ -77,7 +77,6 @@ header {
 
 .main_list ul li {
   width: auto;
-  height: 65px;
   padding: 0;
   padding-right: 3rem;
 }
@@ -93,41 +92,6 @@ header {
 }
 
 @media screen and (max-width: map-get($break-point, 'sm')) {
-  .navTrigger {
-    cursor: pointer;
-    width: 30px;
-    height: 25px;
-    margin: auto;
-    position: absolute;
-    right: 30px;
-    top: 0;
-    bottom: 0;
-  }
-
-  .navTrigger i {
-    background-color: #fff;
-    border-radius: 2px;
-    content: '';
-    display: block;
-    width: 100%;
-    height: 4px;
-  }
-
-  .navTrigger i:nth-child(1) {
-    -webkit-animation: outT 0.8s backwards;
-    animation: outT 0.8s backwards;
-    -webkit-animation-direction: reverse;
-    animation-direction: reverse;
-  }
-
-  .navTrigger i:nth-child(2) {
-    margin: 5px 0;
-    -webkit-animation: outM 0.8s backwards;
-    animation: outM 0.8s backwards;
-    -webkit-animation-direction: reverse;
-    animation-direction: reverse;
-  }
-
   .navTrigger i:nth-child(3) {
     -webkit-animation: outBtm 0.8s backwards;
     animation: outBtm 0.8s backwards;
