@@ -1,7 +1,7 @@
 {
   "title": "MyCSUNClass",
   "publishedAt": "27th Nov 2019",
-  "content": "## Project Specification\n* **Project Type**: UI/UX Case Study and Web App\n* **Source Code**: [GitHub]()\n\n## Problem\nCSUN Students needs a seamless experience selecting classes because the current systme of selecting the right classes classes are fragmented. \n\n### Common Complaints\n* Classes fill up too fast.\n  * Students I spoke to had late registration dates\n* Scheduling conflicts.\n  * Students tend to spend too much times figuring out their classes.\n  * Students have to weigh their options to between different class time\n* Finding relevant classes.\n  * Student have to find an old email frpm an academic advisor\n  * Navigate through the CSUN University Catalog or student portal.\n",
+  "content": "## Project Specification\n* **Project Type**: UI/UX Case Study and Web App\n* **Source Code**: [GitHub](https://github.com/BishoyAbdelmalik/COMP-584-CSUN-Enrollment-Redesign)\n\n## Problem\nCSUN Students needs a seamless experience selecting classes because the current systme of selecting the right classes classes are fragmented. \n\n### Common Complaints\n* Classes fill up too fast.\n  * Students I spoke to had late registration dates\n* Scheduling conflicts.\n  * Students tend to spend too much times figuring out their classes.\n  * Students have to weigh their options to between different class time\n* Finding relevant classes.\n  * Student have to find an old email frpm an academic advisor\n  * Navigate through the CSUN University Catalog or student portal.\n\n",
   "featuredImage": "/images/uploads/mycsunclass.png",
   "seoDescription": "A webapp that allows CSUN students to wishlist their classes"
 }
