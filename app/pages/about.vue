@@ -10,7 +10,13 @@
         to develop simple solutions that everyone can benefits everyone. Feel free to explore my
         site and download my resume.
       </p>
-      <button class="about-me__download">Download Resume</button>
+      <a
+        class="about-me__download"
+        target="_blank"
+        href="https://drive.google.com/file/d/1Rxtg82DIi12haJZJFf7QmJZ8KqnXBoxI/view?usp=sharing"
+      >
+        <button>Download Resume</button>
+      </a>
       <div class="about-me__education">
         <h2>Education</h2>
         <h3>California State University, Northridge (CSUN)</h3>

@@ -2,8 +2,11 @@
   <section class="home">
     <div class="intro-sec">
       <div class="container">
-        <h1 class="intro-sec__heading">Jaime Garcia</h1>
-        <p class="intro-sec__profession">Front-End Developer/UX Engineer</p>
+        <div class="intro-sec-wrapper">
+          <img class="intro-sec__logo" src="/images/uploads/logo--white.svg" alt="" />
+          <h1 class="intro-sec__heading">Jaime Garcia</h1>
+          <p class="intro-sec__profession">Front-End Developer/UX Engineer</p>
+        </div>
       </div>
     </div>
     <div class="container quick-about-me">
@@ -21,7 +24,12 @@
           <nuxt-link to="/about">
             <button>Learn About Me</button>
           </nuxt-link>
-          <button>Download Resume</button>
+          <a
+            target="_blank"
+            href="https://drive.google.com/file/d/1Rxtg82DIi12haJZJFf7QmJZ8KqnXBoxI/view?usp=sharing"
+          >
+            <button>Download Resume</button>
+          </a>
         </div>
       </div>
     </div>
@@ -64,8 +72,16 @@ export default class Home extends Vue {
 
 <style lang="scss">
 .intro-sec {
-  background: $primary;
-  height: calc(100vh - 14rem);
+  background: linear-gradient(0deg, rgba(140, 18, 29, 0.9) 0%, rgba(170, 6, 22, 0.92) 95%),
+    url('https://www.whiteheadassoc.com/wp-content/uploads/2018/09/iStock-998993038.jpg');
+  height: calc(100vh - 10rem);
+  .intro-sec-wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 60vh;
+    align-items: center;
+    justify-content: center;
+  }
   &__heading {
     color: $content-background;
   }
@@ -73,9 +89,38 @@ export default class Home extends Vue {
     color: #e3e3e3;
     font-size: 1.2rem;
   }
+  &__logo {
+    width: 7rem;
+    margin-bottom: 0.75rem;
+  }
 }
 
 @media screen and (min-width: map-get($break-point, 'md')) {
+  .intro-sec {
+    max-height: 30rem;
+    .intro-sec-wrapper {
+      display: grid;
+      height: inherit;
+      grid-template-areas:
+        'name logo'
+        'profession logo';
+      grid-template-columns: 5fr 1fr;
+      column-gap: 2rem;
+      align-items: center;
+      padding-top: 10rem;
+    }
+    &__heading {
+      grid-area: name;
+    }
+    &__profession {
+      grid-area: profession;
+    }
+    &__logo {
+      grid-area: logo;
+      margin: 0;
+      width: 100%;
+    }
+  }
   .quick-about-me {
     display: grid;
     grid-template-areas: 'content-wrapper image';
