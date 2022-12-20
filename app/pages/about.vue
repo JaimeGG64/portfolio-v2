@@ -76,46 +76,75 @@
       <h2>Work Experience</h2>
       <div class="work-experience-wrapper">
         <div class="work-experience-item">
-          <img class="work-experience-wrapper__logo" src="/images/uploads/NASA-logo.svg" alt="" />
+          <img class="work-experience-item__logo" src="/images/uploads/turn7io-logo.jpeg" alt="" />
+          <h3>Turn7.io</h3>
+          <p class="work-experience-item__term">February 2023 &mdash; Present</p>
+          <ul>
+            <li>Develop custom WordPress themes for various clients</li>
+          </ul>
+        </div>
+        <div class="work-experience-item">
+          <img class="work-experience-item__logo" src="/images/uploads/arcs-logo.png" alt="" />
+          <h3>Autonomy Research Center for STEAHM (ARCS)</h3>
+          <p class="work-experience-item__term">February 2022 &mdash; December 2022</p>
+          <ul>
+            <li>Audit over 1000 video clips featuring people with various disability.</li>
+            <li>
+              Presented research findings to Human Computer Interaction and NASA researchers.
+            </li>
+          </ul>
+        </div>
+        <div class="work-experience-item">
+          <img class="work-experience-item__logo" src="/images/uploads/NASA-logo.svg" alt="" />
           <h3>NASA Ames Research Center</h3>
-          <p class="work-experience-wrapper__term">June 2021 &mdash; August 2021</p>
-          <p>
-            Design and executed internal stakeholder interview campaign. Synthesized and analyzed
-            stakeholder interview results for management to make informed decisions. Created
-            proof-of-concept technical demos with Grafana and Plotly JS to help inform UI/UX
-            decisions. Wrote and maintain Confluence pages to inform team members about design
-            decisions, and best practices with implementation details.
-          </p>
+          <p class="work-experience-item__term">June 2021 &mdash; August 2021</p>
+          <ul>
+            <li>
+              Design and executed internal stakeholder interview campaign. Synthesized and analyzed
+              stakeholder interview results for management to make informed decisions.
+            </li>
+            <li>
+              Created proof-of-concepts technical demos with Grafana and Plotly JS to help
+              informative UI/UX decisions.
+            </li>
+            <li>
+              Wrote and maintain Confluence pages to inform team members about design decisions and
+              best practices with implementation details.
+            </li>
+          </ul>
         </div>
         <div class="work-experience-item">
-          <img class="work-experience-wrapper__logo" src="/images/uploads/ixla-logo.png" alt="" />
+          <img class="work-experience-item__logo" src="/images/uploads/ixla-logo.png" alt="" />
           <h3>IntersectLA</h3>
-          <p class="work-experience-wrapper__term">
-            June 2020 &mdash; May 2021, August 2021 &mdash; Present
+          <p class="work-experience-item__term">
+            June 2020 &mdash; May 2021, August 2021 &mdash; January 2022
           </p>
-          <p>
-            Collaborate with students in different disciplines such as Graphic Design, Marketing,
-            and Computer Science. Develop custom WordPress themes with PHP, SCSS, and Gulp. Headed
-            several projects with students to benefit the CSUN community.
-          </p>
+          <ul>
+            <li>
+              Mentored more than 12 colleagues on the fundamentals of Interaction Design, WCAG
+              standards, and Web Development.
+            </li>
+            <li>
+              Lead the development of a design system which lead to the creation of over 100
+              wireframes and counting.
+            </li>
+            <li>Collaborated with professional creatives with non-technical backgrounds.</li>
+          </ul>
         </div>
         <div class="work-experience-item">
-          <img
-            class="work-experience-wrapper__logo"
-            src="/images/uploads/metalab-logo.svg"
-            alt=""
-          />
+          <img class="work-experience-item__logo" src="/images/uploads/metalab-logo.svg" alt="" />
           <h3>META+LAB</h3>
-          <p class="work-experience-wrapper__term">
+          <p class="work-experience-item__term">
             June 2016 &mdash; July 2016, January 2018 &mdash; June 2019
           </p>
-          <p>
-            Started a High School intern designing and developing assets for web application. Then
-            returned as full-time student to develop web applications in a agile scrum environment.
-            Leveraged Vue and SCSS to build scalable and reusable components for the Front-End side
-            of web applications. As well as mentor a high student about the fundamentals of
-            front-end web development.
-          </p>
+          <ul>
+            <li>
+              Develop custom web applications in a scrum agile environment. Participate in code
+              review sessions.
+            </li>
+            <li>Ensure web applications were WCAG compliant and mobile responsive.</li>
+            <li>Mentored a high school student about the fundamental Front-End Web Development.</li>
+          </ul>
         </div>
       </div>
     </div>
@@ -133,6 +162,21 @@
           </nuxt-link>
         </div>
       </div>
+    </div>
+    <div class="container">
+      <h2>Favorite Resources</h2>
+      <h3>Books</h3>
+      <ul>
+        <li>Don't Make me Think</li>
+        <li>Interaction Design</li>
+        <li>The Design of Everyday Things</li>
+      </ul>
+      <h3>Websites</h3>
+      <ul>
+        <li>Front-End Masters</li>
+        <li>Interaction Design Foundation</li>
+        <li>CSS Tricks</li>
+      </ul>
     </div>
   </div>
 </template>
@@ -166,11 +210,21 @@ export default class About extends Vue {
   column-gap: 1rem;
 }
 
+.skill-sets-wrapper-item {
+  .skill-sets-wrapper--two-column-list {
+    column-count: 2;
+  }
+}
+
 .work-experience-wrapper {
   display: grid;
   column-gap: 1rem;
+}
+
+.work-experience-item {
+  border-bottom: 1px solid $dark;
   &__logo {
-    height: 7rem;
+    height: 6rem;
     margin-bottom: 0.25rem;
   }
   &__term {
@@ -188,16 +242,13 @@ export default class About extends Vue {
 
 @media screen and (min-width: map-get($break-point , 'md')) {
   .skill-sets-wrapper {
-    grid-template-columns: 1.15fr 1fr 1fr;
+    grid-template-columns: 1.5fr 1fr 1fr;
+    column-gap: 2rem;
   }
   .work-experience-wrapper {
     grid-template-columns: repeat(2, 1fr);
-  }
-
-  .skill-sets-wrapper-item {
-    .skill-sets-wrapper--two-column-list {
-      column-count: 2;
-    }
+    column-gap: 3rem;
+    row-gap: 2rem;
   }
   .about-me {
     display: grid;
@@ -230,11 +281,7 @@ export default class About extends Vue {
 
 @media screen and (min-width: map-get($break-point , 'lg')) {
   .skill-sets-wrapper {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  .work-experience-wrapper {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1.5fr 1.1fr 1fr;
   }
 
   .about-me {

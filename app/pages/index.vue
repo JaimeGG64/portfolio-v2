@@ -55,7 +55,7 @@
 
 <script lang="ts">
 import { Component, Vue } from 'nuxt-property-decorator';
-import settings from '@/content/settings/general.json';
+// import settings from '@/content/settings/general.json';
 
 @Component({
   // Called to know which transition to apply
@@ -71,6 +71,12 @@ export default class Home extends Vue {
 </script>
 
 <style lang="scss">
+canvas {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+}
+
 .intro-sec {
   background: linear-gradient(0deg, rgba(140, 18, 29, 0.9) 0%, rgba(170, 6, 22, 0.92) 95%),
     url('https://www.whiteheadassoc.com/wp-content/uploads/2018/09/iStock-998993038.jpg');
