@@ -22,7 +22,7 @@
         </p>
         <div class="quick-about-me__btn-wrapper">
           <nuxt-link to="/about">
-            <button>Learn About Me</button>
+            <button>Learn More About Me</button>
           </nuxt-link>
           <a
             target="_blank"
@@ -35,20 +35,21 @@
     </div>
     <div class="container">
       <h2>Projects</h2>
-      <div>
-        <div class="blog-collection-wrapper">
-          <div v-for="(post, index) in posts" :key="index" class="blog-collection-wrapper-item">
-            <nuxt-link :to="`/blog/${post.slug}`">
-              <img
-                :alt="post.title"
-                class="blog-collection-wrapper-item__img"
-                :src="post.featuredImage || 'https://source.unsplash.com/random/640x340'"
-              />
-              <h3 class="blog-collection-wrapper-item__title">{{ post.title }}</h3>
-            </nuxt-link>
-          </div>
+      <div class="blog-collection-wrapper">
+        <div v-for="(post, index) in posts" :key="index" class="blog-collection-wrapper-item">
+          <nuxt-link :to="`/project/${post.slug}`">
+            <img
+              :alt="post.title"
+              class="blog-collection-wrapper-item__img"
+              :src="post.featuredImage || 'https://source.unsplash.com/random/640x340'"
+            />
+            <h3 class="blog-collection-wrapper-item__title">{{ post.title }}</h3>
+          </nuxt-link>
         </div>
       </div>
+      <nuxt-link to="/project">
+        <button>View All Projects</button>
+      </nuxt-link>
     </div>
   </section>
 </template>

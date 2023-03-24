@@ -23,7 +23,7 @@
       <nuxt-link
         v-for="page in paginationMax"
         :key="page + 1"
-        :to="`/blog/page/${page + 1}`"
+        :to="`/project/page/${page + 1}`"
         class="pagination-link"
       >
         {{ page + 1 }}
@@ -31,7 +31,7 @@
     </div>
     <div v-if="currentPage < totalPages" class="w-0 flex-1 flex justify-end">
       <nuxt-link
-        :to="`/blog/page/${currentPage + 1}`"
+        :to="`/project/page/${currentPage + 1}`"
         class="-mt-px border-t-2 border-transparent pt-4 pl-1 inline-flex items-center text-sm leading-5 font-medium text-gray-500 hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-400 transition ease-in-out duration-150"
       >
         Next

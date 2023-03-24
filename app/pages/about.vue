@@ -84,6 +84,24 @@
           </ul>
         </div>
         <div class="work-experience-item">
+          <img class="work-experience-item__logo" src="/images/uploads/ixla-logo.png" alt="" />
+          <h3>IntersectLA</h3>
+          <p class="work-experience-item__term">
+            June 2020 &mdash; May 2021, August 2021 &mdash; January 2022
+          </p>
+          <ul>
+            <li>
+              Mentored more than 12 colleagues on the fundamentals of Interaction Design, WCAG
+              standards, and Web Development.
+            </li>
+            <li>
+              Lead the development of a design system which lead to the creation of over 100
+              wireframes and counting.
+            </li>
+            <li>Collaborated with professional creatives with non-technical backgrounds.</li>
+          </ul>
+        </div>
+        <div class="work-experience-item">
           <img class="work-experience-item__logo" src="/images/uploads/arcs-logo.png" alt="" />
           <h3>Autonomy Research Center for STEAHM (ARCS)</h3>
           <p class="work-experience-item__term">February 2022 &mdash; December 2022</p>
@@ -114,24 +132,6 @@
           </ul>
         </div>
         <div class="work-experience-item">
-          <img class="work-experience-item__logo" src="/images/uploads/ixla-logo.png" alt="" />
-          <h3>IntersectLA</h3>
-          <p class="work-experience-item__term">
-            June 2020 &mdash; May 2021, August 2021 &mdash; January 2022
-          </p>
-          <ul>
-            <li>
-              Mentored more than 12 colleagues on the fundamentals of Interaction Design, WCAG
-              standards, and Web Development.
-            </li>
-            <li>
-              Lead the development of a design system which lead to the creation of over 100
-              wireframes and counting.
-            </li>
-            <li>Collaborated with professional creatives with non-technical backgrounds.</li>
-          </ul>
-        </div>
-        <div class="work-experience-item">
           <img class="work-experience-item__logo" src="/images/uploads/metalab-logo.svg" alt="" />
           <h3>META+LAB</h3>
           <p class="work-experience-item__term">
@@ -152,7 +152,7 @@
       <h2>Projects</h2>
       <div class="blog-collection-wrapper">
         <div v-for="(post, index) in posts" :key="index" class="blog-collection-wrapper-item">
-          <nuxt-link :to="`/blog/${post.slug}`">
+          <nuxt-link :to="`/project/${post.slug}`">
             <img
               :alt="post.title"
               class="blog-collection-wrapper-item__img"
