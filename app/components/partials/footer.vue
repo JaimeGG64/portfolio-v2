@@ -1,7 +1,7 @@
 <template>
   <footer class="footer">
     <div class="container">
-      <div>
+      <!-- <div>
         <h2>Contact</h2>
         <p v-if="isSignedUp">Thank you - we'll be in touch shortly.</p>
         <form
@@ -21,7 +21,7 @@
           />
           <button type="submit">Submit</button>
         </form>
-      </div>
+      </div> -->
       <div class="social">
         <h2>Social</h2>
         <a target="_blank" href="https://github.com/JaimeGG64">

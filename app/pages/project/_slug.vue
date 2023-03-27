@@ -11,7 +11,6 @@
         <img class="blog-header__featured-image" :src="post.featuredImage" alt="" />
       </div>
     </div>
-
     <div v-html="$md.render(post.content)" class="blog-container" />
   </article>
 </template>

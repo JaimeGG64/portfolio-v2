@@ -78,7 +78,7 @@
       <div class="work-experience-wrapper">
         <div class="work-experience-item">
           <img class="work-experience-item__logo" src="/images/uploads/turn7io-logo.jpeg" alt="" />
-          <h3>Turn7.io</h3>
+          <h3><a href="https://turn7.io/" target="_blank">Turn7.io</a></h3>
           <p class="work-experience-item__term">January 2023 &mdash; Present</p>
           <ul>
             <li>Translate wireframe prototypes into production level WordPress websites.</li>
@@ -90,9 +90,10 @@
         </div>
         <div class="work-experience-item">
           <img class="work-experience-item__logo" src="/images/uploads/ixla-logo.png" alt="" />
-          <h3>IntersectLA</h3>
+          <h3><a href="https://intersect.la/" target="_blank">IntersectLA</a></h3>
           <p class="work-experience-item__term">
-            August 2021 &mdash; January 2022, June 2020 &mdash; May 2021
+            August 2021 &mdash; January 2022 <br />
+            June 2020 &mdash; May 2021
           </p>
           <ul>
             <li>
@@ -112,7 +113,11 @@
         </div>
         <div class="work-experience-item">
           <img class="work-experience-item__logo" src="/images/uploads/arcs-logo.png" alt="" />
-          <h3>Autonomy Research Center for STEAHM (ARCS)</h3>
+          <h3>
+            <a href="https://arcs.center/" target="_blank"
+              >Autonomy Research Center for STEAHM (ARCS)</a
+            >
+          </h3>
           <p class="work-experience-item__term">February 2022 &mdash; December 2022</p>
           <ul>
             <li>
@@ -146,7 +151,8 @@
           <img class="work-experience-item__logo" src="/images/uploads/metalab-logo.svg" alt="" />
           <h3>META+LAB</h3>
           <p class="work-experience-item__term">
-            June 2016 &mdash; July 2016, January 2018 &mdash; June 2019
+            January 2018 &mdash; June 2019 <br />
+            June 2016 &mdash; July 2016
           </p>
           <ul>
             <li>Develop custom web applications in a scrum agile environment.</li>
