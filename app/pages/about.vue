@@ -33,31 +33,32 @@
           <h3>Knowledge</h3>
           <ul>
             <li>Front-End Web Development</li>
-            <li>Wireframing</li>
-            <li>Web Content Accessibility Guidelines (WCAG)</li>
-            <li>Responsive Web Design</li>
-            <li>Conducting Stakeholder Interviews</li>
             <li>Content Management System (CMS)</li>
+            <li>Responsive Web Design</li>
+            <li>Web Content Accessibility Guidelines (WCAG)</li>
+            <li>Wireframe Prototyping</li>
             <li>Design Systems</li>
+            <li>Conducting Stakeholder Interviews</li>
           </ul>
         </div>
         <div class="skill-sets-wrapper-item">
           <h3>Web Development</h3>
           <ul class="skill-sets-wrapper--two-column-list">
-            <li>HTML</li>
-            <li>CSS</li>
+            <li>HTML & CSS</li>
             <li>JavaScript (ES6)</li>
+            <li>Command-Line Interface (CLI)</li>
+            <li>WordPress</li>
+            <li>Shopify</li>
+            <li>Git</li>
+            <li>SCSS</li>
             <li>Vue</li>
             <li>React</li>
             <li>Node</li>
-            <li>SCSS</li>
-            <li>PHP</li>
             <li>NPM</li>
+            <li>PHP</li>
             <li>Yarn</li>
             <li>Gulp</li>
             <li>SQL</li>
-            <li>Git</li>
-            <li>WordPress</li>
           </ul>
         </div>
         <div class="skill-sets-wrapper-item">
@@ -78,25 +79,33 @@
         <div class="work-experience-item">
           <img class="work-experience-item__logo" src="/images/uploads/turn7io-logo.jpeg" alt="" />
           <h3>Turn7.io</h3>
-          <p class="work-experience-item__term">February 2023 &mdash; Present</p>
+          <p class="work-experience-item__term">January 2023 &mdash; Present</p>
           <ul>
-            <li>Develop custom WordPress themes for various clients</li>
+            <li>Translate wireframe prototypes into production level WordPress websites.</li>
+            <li>
+              Proposed and implemented a CI/CD workflow for delivering high quality bespoke Shopify
+              sites.
+            </li>
           </ul>
         </div>
         <div class="work-experience-item">
           <img class="work-experience-item__logo" src="/images/uploads/ixla-logo.png" alt="" />
           <h3>IntersectLA</h3>
           <p class="work-experience-item__term">
-            June 2020 &mdash; May 2021, August 2021 &mdash; January 2022
+            August 2021 &mdash; January 2022, June 2020 &mdash; May 2021
           </p>
           <ul>
             <li>
-              Mentored more than 12 colleagues on the fundamentals of Interaction Design, WCAG
-              standards, and Web Development.
-            </li>
-            <li>
               Lead the development of a design system which lead to the creation of over 100
               wireframes and counting.
+            </li>
+            <li>
+              Mentored more than 12 colleagues on the fundamentals of Interaction Design, Web
+              Content Accessibility Guidelines (WCAG) standards, and Web Development.
+            </li>
+            <li>
+              Rewrote over 50 CSUN web pages to meet high HTML semantic standards. Leading to
+              improved web accessibility and SEO rankings.
             </li>
             <li>Collaborated with professional creatives with non-technical backgrounds.</li>
           </ul>
@@ -106,10 +115,12 @@
           <h3>Autonomy Research Center for STEAHM (ARCS)</h3>
           <p class="work-experience-item__term">February 2022 &mdash; December 2022</p>
           <ul>
-            <li>Audit over 1000 video clips featuring people with various disability.</li>
             <li>
-              Presented research findings to Human Computer Interaction and NASA researchers.
+              Develop a research framework to find the most common issues that people with
+              disability face in their daily lives.
             </li>
+            <li>Audit over 1000 video clips featuring people with various disability.</li>
+            <li>Presented research findings to Human Computer Interaction and NASA researchers.</li>
           </ul>
         </div>
         <div class="work-experience-item">
@@ -138,12 +149,17 @@
             June 2016 &mdash; July 2016, January 2018 &mdash; June 2019
           </p>
           <ul>
+            <li>Develop custom web applications in a scrum agile environment.</li>
             <li>
-              Develop custom web applications in a scrum agile environment. Participate in code
-              review sessions.
+              Participate in code review sessions to ensure team members were delivering a high
+              quality product.
             </li>
             <li>Ensure web applications were WCAG compliant and mobile responsive.</li>
-            <li>Mentored a high school student about the fundamental Front-End Web Development.</li>
+            <li>Leverage Vue and SCSS to build scalable and reusable Application components.</li>
+            <li>
+              Mentored a high school student about the fundamental skills of Front-End Web
+              Development.
+            </li>
           </ul>
         </div>
       </div>
@@ -163,7 +179,7 @@
         </div>
       </div>
     </div>
-    <div class="container">
+    <!-- <div class="container">
       <h2>Favorite Resources</h2>
       <h3>Books</h3>
       <ul>
@@ -177,7 +193,7 @@
         <li>Interaction Design Foundation</li>
         <li>CSS Tricks</li>
       </ul>
-    </div>
+    </div> -->
   </div>
 </template>
 
@@ -243,7 +259,7 @@ export default class About extends Vue {
 @media screen and (min-width: map-get($break-point , 'md')) {
   .skill-sets-wrapper {
     grid-template-columns: 1.5fr 1fr 1fr;
-    column-gap: 2rem;
+    column-gap: 2.75rem;
   }
   .work-experience-wrapper {
     grid-template-columns: repeat(2, 1fr);
@@ -281,7 +297,7 @@ export default class About extends Vue {
 
 @media screen and (min-width: map-get($break-point , 'lg')) {
   .skill-sets-wrapper {
-    grid-template-columns: 1.5fr 1.1fr 1fr;
+    grid-template-columns: 10fr 10fr 4fr;
   }
 
   .about-me {
