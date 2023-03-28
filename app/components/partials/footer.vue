@@ -35,11 +35,6 @@
             viewBox="0 0 496 512"
             xml:space="preserve"
           >
-            <style type="text/css">
-              .st0 {
-                fill: #fffdf5;
-              }
-            </style>
             <path
               class="st0"
               d="M165.9,397.4c0,2-2.3,3.6-5.2,3.6c-3.3,0.3-5.6-1.3-5.6-3.6c0-2,2.3-3.6,5.2-3.6
@@ -70,11 +65,6 @@
             viewBox="0 0 448 512"
             xml:space="preserve"
           >
-            <style type="text/css">
-              .st0 {
-                fill: #fffdf5;
-              }
-            </style>
             <path
               class="st0"
               d="M100.3,448H7.4V148.9h92.9V448z M53.8,108.1C24.1,108.1,0,83.5,0,53.8C0,24.1,24.1,0,53.8,0
@@ -85,7 +75,7 @@
           </svg>
         </a>
       </div>
-      © Copyright 2022. Jaime Garcia All Rights Reserved
+      © Copyright {{ year }}. Jaime Garcia All Rights Reserved
     </div>
   </footer>
 </template>
@@ -97,41 +87,43 @@ import { Component, Vue } from 'nuxt-property-decorator';
 export default class Footer extends Vue {
   isSignedUp = false;
 
+  year = new Date().getFullYear();
+
   form = {
     email: '',
   };
 
-  encode(data): string {
-    return Object.keys(data)
-      .map((key) => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`)
-      .join('&');
-  }
+  // encode(data): string {
+  //   return Object.keys(data)
+  //     .map((key) => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`)
+  //     .join('&');
+  // }
 
   // eslint-disable-next-line
-  validEmail(email): boolean {
-    const re =
-      '/^(([^<>()[]\\.,;:s@"]+(.[^<>()[]\\.,;:s@"]+)*)|(".+"))@(([[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}])|(([a-zA-Z-0-9]+.)+[a-zA-Z]{2,}))$/';
-    return re.test(email);
-  }
+  // validEmail(email): boolean {
+  //   const re =
+  //     '/^(([^<>()[]\\.,;:s@"]+(.[^<>()[]\\.,;:s@"]+)*)|(".+"))@(([[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}])|(([a-zA-Z-0-9]+.)+[a-zA-Z]{2,}))$/';
+  //   return re.test(email);
+  // }
 
-  async handleSubmit(): Promise<void> {
-    if (!this.validEmail(this.form.email)) {
-      this.$refs.emailInput.focus();
-      return;
-    }
+  // async handleSubmit(): Promise<void> {
+  //   if (!this.validEmail(this.form.email)) {
+  //     this.$refs.emailInput.focus();
+  //     return;
+  //   }
 
-    try {
-      await fetch('/', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: this.encode({ 'form-name': 'signups', ...this.form }),
-      });
+  //   try {
+  //     await fetch('/', {
+  //       method: 'POST',
+  //       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+  //       body: this.encode({ 'form-name': 'signups', ...this.form }),
+  //     });
 
-      this.isSignedUp = true;
-    } catch (error) {
-      console.error(error);
-    }
-  }
+  //     this.isSignedUp = true;
+  //   } catch (error) {
+  //     console.error(error);
+  //   }
+  // }
 }
 </script>
 
@@ -150,6 +142,7 @@ export default class Footer extends Vue {
     svg {
       width: 2.75rem;
       padding-right: 1rem;
+      fill: #fffdf5;
     }
   }
 }

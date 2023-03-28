@@ -10,6 +10,7 @@ interface Post {
   excerpt?: string;
   content: string;
   publishedAt: string;
+  liveLink: string;
   featuredImage?: string;
   seoDescription?: string;
   seoMetaImage?: string;
