@@ -9,7 +9,7 @@
         </div>
       </div>
     </div>
-    <div class="container quick-about-me">
+    <div class="container row-section-separator quick-about-me">
       <img class="quick-about-me__image" src="/images/uploads/headshot.jpg" alt="" />
       <div class="quick-about-me__content-wrapper">
         <h2>About Me</h2>
@@ -33,7 +33,7 @@
         </div>
       </div>
     </div>
-    <div class="container">
+    <div class="container row-section-separator">
       <h2>Projects</h2>
       <div class="blog-collection-wrapper">
         <div v-for="(post, index) in posts" :key="index" class="blog-collection-wrapper-item">

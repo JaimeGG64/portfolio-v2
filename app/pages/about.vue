@@ -1,6 +1,6 @@
 <template>
   <div class="about">
-    <div class="container about-me">
+    <div class="container row-section-separator about-me">
       <h1 class="about-me__heading">About Me</h1>
       <img class="about-me__image" src="/images/uploads/headshot.jpg" alt="" />
       <p class="about-me__copy">
@@ -26,7 +26,7 @@
         </ul>
       </div>
     </div>
-    <div class="container">
+    <div class="container row-section-separator">
       <h2>Skill Sets</h2>
       <div class="skill-sets-wrapper">
         <div class="skill-sets-wrapper-item">
@@ -73,7 +73,7 @@
         </div>
       </div>
     </div>
-    <div class="container">
+    <div class="container row-section-separator">
       <h2>Work Experience</h2>
       <div class="work-experience-wrapper">
         <div class="work-experience-item">
@@ -170,7 +170,7 @@
         </div>
       </div>
     </div>
-    <div class="container">
+    <div class="container row-section-separator">
       <h2>Projects</h2>
       <div class="blog-collection-wrapper">
         <div v-for="(post, index) in posts" :key="index" class="blog-collection-wrapper-item">
