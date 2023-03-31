@@ -24,6 +24,11 @@
 
 .blog-collection-wrapper {
     display: grid;
+    row-gap: 1.5rem;
+    &__btn {
+        display: flex;
+        justify-content: center;
+    }
 }
 
 @media screen and (min-width: map-get($break-point, 'md')) {
@@ -40,7 +45,7 @@
     }
     .blog-collection-wrapper {
         grid-template-columns: repeat(3, 1fr);
-        gap: 1rem;
+        gap: 1.5rem;
     }
 }
 

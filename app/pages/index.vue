@@ -49,7 +49,7 @@
           </template>
         </div>
       </div>
-      <nuxt-link to="/project">
+      <nuxt-link to="/project" class="blog-collection-wrapper__btn">
         <button>View All Projects</button>
       </nuxt-link>
     </div>

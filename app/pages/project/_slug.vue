@@ -11,7 +11,7 @@
         <img class="blog-header__featured-image" :src="post.featuredImage" alt="" />
       </div>
     </div>
-    <p v-if="post.liveLink"><a :href="post.liveLink" target="_blank">Live Demo</a></p>
+    <!-- <p v-if="post.liveLink"><a :href="post.liveLink" target="_blank">Live Demo</a></p> -->
     <div v-html="$md.render(post.content)" class="blog-container" />
   </article>
 </template>
