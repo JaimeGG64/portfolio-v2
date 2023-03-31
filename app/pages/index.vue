@@ -37,14 +37,16 @@
       <h2>Projects</h2>
       <div class="blog-collection-wrapper">
         <div v-for="(post, index) in posts" :key="index" class="blog-collection-wrapper-item">
-          <nuxt-link :to="`/project/${post.slug}`">
-            <img
-              :alt="post.title"
-              class="blog-collection-wrapper-item__img"
-              :src="post.featuredImage || 'https://source.unsplash.com/random/640x340'"
-            />
-            <h3 class="blog-collection-wrapper-item__title">{{ post.title }}</h3>
-          </nuxt-link>
+          <template v-if="index < 3">
+            <nuxt-link :to="`/project/${post.slug}`">
+              <img
+                :alt="post.title"
+                class="blog-collection-wrapper-item__img"
+                :src="post.featuredImage || 'https://source.unsplash.com/random/640x340'"
+              />
+              <h3 class="blog-collection-wrapper-item__title">{{ post.title }}</h3>
+            </nuxt-link>
+          </template>
         </div>
       </div>
       <nuxt-link to="/project">
