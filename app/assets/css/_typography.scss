@@ -7,19 +7,20 @@ body {
 }
 
 h1 {
-    font-size: 3.2rem;
+    font-size: 2.75rem;
     color: $dark;
     line-height: 1;
 }
 
 h2 {
-    font-size: 1.6rem;
+    font-size: 1.65rem;
     color: $primary;
+    line-height: 1.25;
 }
 
 h3 {
     color: $dark;
-    font-size: 1.21rem;
+    font-size: 1.25rem;
 }
 
 ul{
@@ -44,6 +45,7 @@ ul, ol {
 
 p {
     margin-bottom: 1rem;
+    font-size: 1.15rem;
 }
 
 @media screen and (min-width: map-get($break-point, 'lg')) {

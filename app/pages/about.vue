@@ -245,7 +245,7 @@ export default class About extends Vue {
 
 .work-experience-wrapper {
   display: grid;
-  column-gap: 1rem;
+  gap: 1.5rem;
 }
 
 .work-experience-item {
