@@ -76,9 +76,17 @@ collections:
     sort: 'published_at:desc'
     fields:
       - { label: Title, name: title, widget: string }
-      - { label: 'Published At', name: publishedAt, widget: date, format: 'Do MMM YYYY' }
-      - { label: Live Site, name: liveLink, widget: string }
       - { label: 'Featured Image', name: featuredImage, widget: image, required: false }
+      - { label: 'Published At', name: publishedAt, widget: date, format: 'Do MMM YYYY' }
+      - { label: 'Live Site', name: liveLink, widget: string, required: false}
+      - { label: 'Project Type', name: projectType, widget: string }
       - { label: 'SEO Description', name: seoDescription, widget: text, required: false }
       - { label: 'SEO Meta Image', name: seoMetaImage, widget: image, required: false }
       - { label: Content, name: content, widget: markdown }
+      - name: teamMembers
+        label: 'Team Members'
+        widget: list
+        fields:
+          - {label: Name, name: name, widget: string}
+          - {label: 'Site', name: site, widget: string}
+        required: false

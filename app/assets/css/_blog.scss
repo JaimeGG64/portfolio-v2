@@ -30,6 +30,10 @@
         justify-content: center;
         text-decoration: none;
     }
+    &__title {
+        color: $dark;
+        font-size: 1.25rem;
+    }
 }
 
 @media screen and (min-width: map-get($break-point, 'md')) {

@@ -115,7 +115,11 @@
           <img class="work-experience-item__logo" src="/images/uploads/arcs-logo.png" alt="" />
           <h3>
             <a href="https://arcs.center/" target="_blank"
-              >Autonomy Research Center for STEAHM (ARCS)</a
+              >Autonomy Research Center for
+              <abbr title="Science Technology Entrepreneurship Arts Humanities Mathematics"
+                >STEAHM</abbr
+              >
+              (ARCS)</a
             >
           </h3>
           <p class="work-experience-item__term">February 2022 &mdash; December 2022</p>
