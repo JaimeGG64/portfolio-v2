@@ -11,6 +11,7 @@ interface Post {
   content: string;
   publishedAt: string;
   liveLink: string;
+  projectType: string;
   featuredImage?: string;
   seoDescription?: string;
   seoMetaImage?: string;

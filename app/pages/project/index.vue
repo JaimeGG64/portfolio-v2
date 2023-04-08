@@ -14,6 +14,7 @@
               :src="post.featuredImage || 'https://source.unsplash.com/random/640x340'"
             />
             <h3 class="blog-collection-wrapper-item__title">{{ post.title }}</h3>
+            <p v-if="post.projectType">{{ post.projectType }}</p>
           </nuxt-link>
         </div>
       </div>
