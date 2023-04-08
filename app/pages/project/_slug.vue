@@ -1,19 +1,29 @@
 <template>
-  <article class="post" :class="post.slug">
-    <div class="blog-header">
-      <div class="blog-container">
-        <h1 class="blog-header__header">
-          {{ post.title }}
-        </h1>
-        <p class="blog-header__desc">
-          {{ post.seoDescription }}
-        </p>
-        <img class="blog-header__featured-image" :src="post.featuredImage" alt="" />
-      </div>
-    </div>
-    <!-- <p v-if="post.liveLink"><a :href="post.liveLink" target="_blank">Live Demo</a></p> -->
-    <div v-html="$md.render(post.content)" class="blog-container" />
-  </article>
+  <main class="project-post container" :class="post.slug">
+    <section>
+      <h1 class="blog-header__header">
+        {{ post.title }}
+      </h1>
+      <img class="blog-header__featured-image" :src="post.featuredImage" alt="" />
+      <p class="blog-header__desc">
+        {{ post.seoDescription }}
+      </p>
+    </section>
+    <aside class="project-post__aside">
+      <h2>Project Specification</h2>
+      <button v-if="post.liveLink"><a :href="post.liveLink" target="_blank">Live Demo</a></button>
+
+      <h3 v-if="post.teamMembers">Team Members</h3>
+      <ul v-if="post.teamMembers">
+        <li v-for="(teamMember, index) in post.teamMembers" :key="index">
+          <a :href="teamMember.site" target="_blank">
+            {{ teamMember.name }}
+          </a>
+        </li>
+      </ul>
+    </aside>
+    <article v-html="$md.render(post.content)" />
+  </main>
 </template>
 
 <script lang="ts">

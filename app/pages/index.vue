@@ -1,5 +1,5 @@
 <template>
-  <section class="home">
+  <main class="home">
     <div class="intro-sec">
       <div class="container">
         <div class="intro-sec-wrapper">
@@ -54,7 +54,7 @@
         <button>View All Projects</button>
       </nuxt-link>
     </div>
-  </section>
+  </main>
 </template>
 
 <script lang="ts">

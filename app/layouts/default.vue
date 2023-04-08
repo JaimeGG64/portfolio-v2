@@ -1,9 +1,9 @@
 <template>
-  <main :class="[$route.name]" class="main">
+  <div :class="[$route.name]" class="main">
     <site-header />
     <nuxt class="nuxt" />
     <site-footer />
-  </main>
+  </div>
 </template>
 
 <script lang="ts">
