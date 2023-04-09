@@ -11,8 +11,7 @@
     </section>
     <aside class="project-post__aside">
       <h2>Project Specification</h2>
-      <button v-if="post.liveLink"><a :href="post.liveLink" target="_blank">Live Demo</a></button>
-
+      <p v-if="post.projectType"><b>Project Type</b>: {{ post.projectType }}</p>
       <h3 v-if="post.teamMembers">Team Members</h3>
       <ul v-if="post.teamMembers">
         <li v-for="(teamMember, index) in post.teamMembers" :key="index">
@@ -21,6 +20,7 @@
           </a>
         </li>
       </ul>
+      <button v-if="post.liveLink"><a :href="post.liveLink" target="_blank">Live Demo</a></button>
     </aside>
     <article v-html="$md.render(post.content)" />
   </main>

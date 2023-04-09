@@ -1,4 +1,5 @@
 .project-post{
+    margin-top: 1.7rem;
     &__header{
         padding-top: 2rem;
     }
@@ -31,8 +32,9 @@
 
 @media screen and (min-width: map-get($break-point, 'lg')) {
     .project-post{
+        margin-top: 2.75rem;
         display: grid;
-        grid-template-columns: 6.5fr 3.75fr;
+        grid-template-columns: 6.75fr 3.5fr;
         column-gap: 5.5rem;
         &__aside {
             position: sticky;
