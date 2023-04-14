@@ -14,20 +14,13 @@
       <div class="quick-about-me__content-wrapper">
         <h2>About Me</h2>
         <p>
-          Hello there, my name is Jaime Garcia a Front-End Web Developer. I am interested in
-          bridging the gap between creativity and technology. During my time at California State
-          University, Northridge (CSUN) I had the chance to work with talented creatives and
-          software engineers to develop simple solutions that everyone can benefits everyone. Feel
-          free to explore my site and download my resume.
+          {{ welcomeText }}
         </p>
         <div class="quick-about-me__btn-wrapper">
           <nuxt-link to="/about">
             <button>Learn More About Me</button>
           </nuxt-link>
-          <a
-            target="_blank"
-            href="https://drive.google.com/file/d/1Rxtg82DIi12haJZJFf7QmJZ8KqnXBoxI/view?usp=sharing"
-          >
+          <a target="_blank" :href="linkToResume">
             <button>Download Resume</button>
           </a>
         </div>
@@ -59,7 +52,7 @@
 
 <script lang="ts">
 import { Component, Vue } from 'nuxt-property-decorator';
-// import settings from '@/content/settings/general.json';
+import settings from '@/content/settings/general.json';
 
 @Component({
   // Called to know which transition to apply
@@ -71,6 +64,10 @@ export default class Home extends Vue {
   get posts(): Post[] {
     return this.$store.state.posts;
   }
+
+  welcomeText = settings.welcomeText;
+
+  linkToResume = settings.linkToResume;
 }
 </script>
 

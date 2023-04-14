@@ -5,6 +5,8 @@ declare global {
 }
 
 interface Post {
+teamMembers: any;
+featuredButton: any;
   title: string;
   slug?: string;
   excerpt?: string;

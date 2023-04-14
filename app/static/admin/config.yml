@@ -20,11 +20,12 @@ collections:
         format: json
         file: 'app/content/settings/general.json'
         fields:
-          - { label: Title, name: title, widget: string }
-          - { label: 'Title Template', name: titleTemplate, widget: string }
-          - { label: 'Welcome Text', name: welcomeText, widget: markdown }
           - { label: Logo, name: logo, widget: image }
           - { label: Icon, name: icon, widget: image }
+          - { label: Title, name: title, widget: string }
+          - { label: 'Title Template', name: titleTemplate, widget: string }
+          - { label: 'Link to Resume', name: linkToResume, widget: string }
+          - { label: 'Welcome Text', name: welcomeText, widget: text' }
           - { label: 'Loading Color', name: loadingColor, widget: string, default: '#000000' }
           - { label: 'SEO Description', name: seoDescription, widget: text, required: false }
           - { label: 'SEO Meta Image', name: seoMetaImage, widget: image, required: false }
@@ -89,4 +90,11 @@ collections:
         fields:
           - {label: Name, name: name, widget: string}
           - {label: 'Site', name: site, widget: string}
+        required: false
+      - name: featuredButton
+        label: 'Featured Button'
+        widget: list
+        fields:
+          - {label: Button Text, name: buttonText, widget: string}
+          - {label: 'Link', name: link, widget: string}
         required: false

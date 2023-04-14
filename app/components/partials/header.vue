@@ -20,9 +20,9 @@
           <li v-for="(page, index) in pages" :key="index" class="nav-list-item">
             <nuxt-link :to="`/${page.slug}`">{{ page.title }}</nuxt-link>
           </li>
-          <!-- <li>
-            <nuxt-link to="/blog" class="nav-list-item"> Projects </nuxt-link>
-          </li> -->
+          <li>
+            <nuxt-link to="/project" class="nav-list-item"> Projects </nuxt-link>
+          </li>
         </ul>
       </nav>
     </div>

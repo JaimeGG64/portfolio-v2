@@ -3,7 +3,6 @@
   "title": "CSUN WebTwo Prototyping Kit",
   "featuredImage": "/images/uploads/webtwo-prototyping-kit.png",
   "content": "## Background\n\nCalifornia State University, Northridge (CSUN) is a public university in the Northridge neighborhood of Los Angeles, California. CSUN serve over 30,000 currently enrolled students and offer over 100 majors programs. With CSUN wanting to improve their online presence and introduction of a new proprietary page builder for faculty. The team at Intersect LA saw the opportunity to create prototyping kit that can benefit the whole university.\n\n![](/images/uploads/old_csun_webone.png \"Screenshot of Old CSUN Mike Curb College Website\")\n\n## Project Objectives\n\nThe team aimed to enhance the overall navigation across CSUN's web resources and establish CSUN as an exceptional university that future students would aspire to attend. To achieve this, the team developed a design system that anyone across the university can utilize in their own projects. Regardless of their department within the university.\n\n### Inspiration\n\nThe team was inspired by the Google Material design system and Atomic Design by Brad Frost. Where every component is documented regarding their typography properties, colors, and sizing. Hover we still wanted to make the design system approachable to use even for novice designers.\n\n## In Practice\n\nIt one thing to spend the time and energy to create a robust design system. It is another thing to get people and organization to adopt the design system in their workflow. Once the internal team felt ready to share our design system. We organized a demonstration session to help educate our organization what is a design system and how it can benefit us for this process of translating outdated CSUN page into these new modern templates. IntersectLA team members were quick to adopt the prototyping kit.\n\n![](/images/uploads/webtwo_screenshot_of_comm_studies.png \"IntersectLA Team Member Designing Pages for Communication Studies\")\n\nInstead of having team members wasting time adjusting font sizes, spacings of elements, and/or finding the right colors. Team members could focus on more complex issues such as restructing the department's web content to be more easy to navigate and finding the right photo for the page.\n\n## Future Plans\n\nCurrently the WebTwo Prototyping Kit being utilized at IntersectLA and CSUN University Relations and Advancement (URA). However, our team hope that other department could adopt the WebTwo Prototyping Kit in their project. In the future we plan to add componments for mobile. In case stakeholder are curious on how their content will appear in mobile screens. Due to a larger percentage of college student being on their mobile device daily.",
-  "liveLink": "https://www.figma.com/file/asGTY28Lbus5uwUTABEp7M/CSUN-WebTwo-Prototyping-Kit?node-id=297%3A36&t=hjuHH06ezRqvsjG3-1",
   "teamMembers": [
     {
       "site": "https://www.matthewbibicoff.design/",
@@ -20,6 +19,12 @@
     {
       "name": "Jeanette Hartouni",
       "site": "https://www.linkedin.com/in/jeanette-hartouni/"
+    }
+  ],
+  "featuredButton": [
+    {
+      "buttonText": "View UI Kit",
+      "link": "https://www.figma.com/file/asGTY28Lbus5uwUTABEp7M/CSUN-WebTwo-Prototyping-Kit?node-id=297%3A36&t=hjuHH06ezRqvsjG3-1"
     }
   ],
   "projectType": "Design System"

@@ -1,3 +1,4 @@
+<!-- eslint-disable vue-a11y/anchor-has-content -->
 <template>
   <main class="project-post container" :class="post.slug">
     <section>
@@ -20,7 +21,11 @@
           </a>
         </li>
       </ul>
-      <button v-if="post.liveLink"><a :href="post.liveLink" target="_blank">Live Demo</a></button>
+      <a v-if="post.featuredButton" :href="post.featuredButton[0].link" target="_blank">
+        <button>
+          {{ post.featuredButton[0].buttonText }}
+        </button>
+      </a>
     </aside>
     <article v-html="$md.render(post.content)" />
   </main>

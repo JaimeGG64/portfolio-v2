@@ -4,17 +4,9 @@
       <h1 class="about-me__heading">About Me</h1>
       <img class="about-me__image" src="/images/uploads/headshot.jpg" alt="" />
       <p class="about-me__copy">
-        Hello there, my name is Jaime Garcia a Front-End Web Developer. I am interested in bridging
-        the gap between creativity and technology. During my time at California State University,
-        Northridge (CSUN), I had the chance to work with talented creatives and software engineers
-        to develop simple solutions that everyone can benefits everyone. Feel free to explore my
-        site and download my resume.
+        {{ welcomeText }}
       </p>
-      <a
-        class="about-me__download"
-        target="_blank"
-        href="https://drive.google.com/file/d/1Rxtg82DIi12haJZJFf7QmJZ8KqnXBoxI/view?usp=sharing"
-      >
+      <a class="about-me__download" target="_blank" :href="linkToResume">
         <button>Download Resume</button>
       </a>
       <div class="about-me__education">
@@ -85,6 +77,9 @@
             <li>
               Proposed and implemented a CI/CD workflow for delivering high quality bespoke Shopify
               sites.
+            </li>
+            <li>
+              Wrote and maintained technical documentation that benefits the organization.
             </li>
           </ul>
         </div>
@@ -215,7 +210,7 @@
 
 <script lang="ts">
 import { Component, Vue } from 'nuxt-property-decorator';
-// import settings from '@/content/settings/general.json';
+import settings from '@/content/settings/general.json';
 import { MetaInfo } from 'vue-meta';
 
 @Component({
@@ -233,6 +228,10 @@ export default class About extends Vue {
   get posts(): Post[] {
     return this.$store.state.posts;
   }
+
+  welcomeText = settings.welcomeText;
+
+  linkToResume = settings.linkToResume;
 }
 </script>
 
