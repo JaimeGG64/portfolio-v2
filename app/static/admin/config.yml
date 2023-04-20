@@ -83,6 +83,7 @@ collections:
       - { label: 'Project Type', name: projectType, widget: string }
       - { label: 'SEO Description', name: seoDescription, widget: text, required: false }
       - { label: 'SEO Meta Image', name: seoMetaImage, widget: image, required: false }
+      - { label: 'Source Code Repro', name: sourceCodeRepro, widget: text, required: false }
       - { label: Content, name: content, widget: markdown }
       - name: teamMembers
         label: 'Team Members'

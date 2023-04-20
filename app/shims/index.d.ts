@@ -5,9 +5,10 @@ declare global {
 }
 
 interface Post {
-teamMembers: any;
-featuredButton: any;
+  teamMembers: Array<string, unknown>;
+  featuredButton: Array<string, unknown>;
   title: string;
+  sourceCodeRepro: string;
   slug?: string;
   excerpt?: string;
   content: string;

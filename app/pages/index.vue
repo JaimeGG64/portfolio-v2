@@ -102,6 +102,14 @@ canvas {
   }
 }
 
+.quick-about-me {
+  &__btn-wrapper {
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+  }
+}
+
 @media screen and (min-width: map-get($break-point, 'md')) {
   .intro-sec {
     max-height: 30rem;
@@ -140,6 +148,9 @@ canvas {
       height: fit-content;
       align-self: center;
       grid-area: content-wrapper;
+    }
+    &__btn-wrapper {
+      flex-direction: row;
     }
   }
 }

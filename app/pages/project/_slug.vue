@@ -13,6 +13,12 @@
     <aside class="project-post__aside">
       <h2>Project Specification</h2>
       <p v-if="post.projectType"><b>Project Type</b>: {{ post.projectType }}</p>
+      <p v-if="post.sourceCodeRepro">
+        <a v-if="post.sourceCodeRepro != 'NDA'" :href="post.sourceCodeRepro" target="_blank">
+          View Source Code
+        </a>
+        <template v-else> Source Code: <abbr title="non-disclosure agreement">NDA</abbr> </template>
+      </p>
       <h3 v-if="post.teamMembers">Team Members</h3>
       <ul v-if="post.teamMembers">
         <li v-for="(teamMember, index) in post.teamMembers" :key="index">

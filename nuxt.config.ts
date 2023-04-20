@@ -49,10 +49,10 @@ const nuxtConfig: Configuration = {
   /*
    ** Global CSS
    */
-  css: ['@/assets/css/main.scss'],
+  css: ['@/assets/scss/main.scss'],
 
   styleResources: {
-    scss: ['~assets/css/_variables.scss', '~assets/css/_mixins.scss'],
+    scss: ['~assets/scss/_variables.scss', '~assets/scss/_mixins.scss'],
   },
 
   generate: {
