@@ -1,11 +1,11 @@
 {
-  "title": "Home",
-  "titleTemplate": "| Jaime's Portfolio",
-  "welcomeText": "Hello there, my name is Jaime Garcia a Front-End Web Developer. I am interested in bridging the gap between creativity and technology. During my time at California State University, Northridge (CSUN) I had the chance to collaborate with talented creatives and software engineers to develop solutions that everyone can benefits everyone. Feel free to explore my site and download my resume.",
-  "linkToResume" : "https://drive.google.com/file/d/1Rxtg82DIi12haJZJFf7QmJZ8KqnXBoxI/view?usp=sharing",
-  "logo": "/images/uploads/logo.svg",
-  "icon": "/images/uploads/logo.png",
+  "linkToResume": "https://drive.google.com/file/d/11NJyCXGqcHbzr_c8DlVJ3LXa6kHY9OAB/view?usp=sharing",
   "loadingColor": "#0b3765",
-  "seoDescription": "Jaime Garcia a Front-End Web Developer.",
-  "seoMetaImage": ""
+  "logo": "/images/uploads/logo.svg",
+  "welcomeText": "Hello there, my name is Jaime Garcia a Front-End Web Developer. I am interested in bridging the gap between creativity and technology. During my time at California State University, Northridge (CSUN) I had the chance to collaborate with talented creatives and software engineers to develop solutions that everyone can benefits everyone. Feel free to explore my site and download my resume.",
+  "titleTemplate": "| Jaime's Portfolio",
+  "title": "Home",
+  "icon": "/images/uploads/logo.png",
+  "seoMetaImage": "",
+  "seoDescription": "Jaime Garcia a Front-End Web Developer."
 }
