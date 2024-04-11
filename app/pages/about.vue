@@ -29,6 +29,7 @@
             <li>Responsive Web Design</li>
             <li>Web Content Accessibility Guidelines (WCAG)</li>
             <li>Wireframe Prototyping</li>
+            <li>Client-side Form Validation</li>
             <li>Design Systems</li>
             <li>Conducting Stakeholder Interviews</li>
           </ul>
@@ -47,6 +48,7 @@
             <li>React</li>
             <li>Node</li>
             <li>NPM</li>
+            <li>Handlebars.js</li>
             <li>PHP</li>
             <li>Yarn</li>
             <li>Gulp</li>
@@ -73,7 +75,9 @@
           <h3><a href="https://turn7.io/" target="_blank">Turn7.io</a></h3>
           <p class="work-experience-item__term">January 2023 &mdash; Present</p>
           <ul>
-            <li>Translate wireframe prototypes into production level WordPress websites.</li>
+            <li>
+              Translate wireframe prototypes into production level WordPress and Shopify websites.
+            </li>
             <li>
               Proposed and implemented a CI/CD workflow for delivering high quality bespoke Shopify
               sites.
